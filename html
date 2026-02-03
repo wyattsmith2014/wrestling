@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Wrestling Federation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1>BROWSER WRESTLING FEDERATION</h1>
+            <p>Friday Night Main Event</p>
+        </header>
+
+        <div class="ring">
+            
+            <div class="wrestler" id="player-side">
+                <h2>YOU 🤼</h2>
+                <div class="health-bar-container">
+                    <div class="health-bar" id="player-health"></div>
+                </div>
+                <p id="player-hp-text">100 / 100 HP</p>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="wrestler" id="cpu-side">
+                <h2>CPU 🤖</h2>
+                <div class="health-bar-container">
+                    <div class="health-bar" id="cpu-health"></div>
+                </div>
+                <p id="cpu-hp-text">100 / 100 HP</p>
+            </div>
+        </div>
+
+        <div class="commentary-box" id="commentary">
+            <p>The bell has rung! Make your move!</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn strike" onclick="playRound('strike')">👊 STRIKE</button>
+            <button class="btn grapple" onclick="playRound('grapple')">🤼 GRAPPLE</button>
+            <button class="btn block" onclick="playRound('block')">🛡️ BLOCK</button>
+        </div>
+        
+        <button id="reset-btn" onclick="resetGame()" style="display:none;">Rematch?</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
